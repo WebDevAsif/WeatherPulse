@@ -1,13 +1,12 @@
-````markdown
 # Weather App
 
 This is a simple weather application built with React that displays current weather information for a given city using the OpenWeather API.
 
 ## Features
 
-- Displays current temperature, weather condition, and city name.
+- Displays current temperature, weather conditions, and city names.
 - Shows additional details such as minimum and maximum temperature, humidity, and feels like temperature.
-- Uses dynamic background images based on the weather condition.
+- Uses dynamic background images based on the weather conditions.
 
 ## Technologies Used
 
@@ -22,7 +21,6 @@ This is a simple weather application built with React that displays current weat
    ```bash
    git clone https://github.com/WebDevAsif/WeatherPulse.git
    ```
-````
 
 2. Navigate to the project directory:
 
@@ -52,5 +50,4 @@ This is a simple weather application built with React that displays current weat
 
 ## Screenshots
 
-[<img alt="img" src="https://github.com/WebDevAsif/WeatherPulse/blob/main/src/assets/weather-image.png" style="margin:0 50px;">
-]
+<img alt="img" src="https://github.com/WebDevAsif/WeatherPulse/blob/main/src/assets/weather-image.png" style="margin:0 50px;">
