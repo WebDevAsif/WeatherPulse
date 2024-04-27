@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* overflow: hidden; */
+}
+
+.weather-app {
+  height: 100vh;
+  position: relative;
+}
+
+.weather-app__left {
+  margin-top: 10px;
+  padding: 0 25px;
+  text-align: center;
+}
+
+.weather-app__details {
+  padding: 15px;
+  p {
+    font-size: 6rem;
+  }
+}
+
+.weather-app__right {
+  background: rgba(0, 0, 0, 0.5);
+  background: url(../../assets/weather_icons/Background.jpg);
+  background-size: cover;
+  opacity: 0.8;
+  a {
+    text-decoration: none;
+    color: white;
+  }
+  display: flex;
+  align-items: start;
+  justify-content: end;
+  flex-direction: column;
+  padding-bottom: 20px;
+}
+
+@media (max-width: 767.9px) {
+  .weather-app__right {
+    display: none;
+  }
+}

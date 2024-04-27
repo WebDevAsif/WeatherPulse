@@ -1,0 +1,16 @@
+.info-box {
+  padding: 3rem 0;
+}
+
+.info-box img {
+  width: 100px;
+}
+
+.info-box__temp,
+.info-box__city {
+  font-size: 2rem;
+}
+
+p {
+  margin: 0;
+}
