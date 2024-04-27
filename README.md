@@ -52,5 +52,5 @@ This is a simple weather application built with React that displays current weat
 
 ## Screenshots
 
-[<img alt="img" src="../weather-app/src/assets/weather-image.png" style="margin:0 50px;">
+[<img alt="img" src="https://github.com/WebDevAsif/WeatherPulse/src/assets/weather-image.png" style="margin:0 50px;">
 ]
