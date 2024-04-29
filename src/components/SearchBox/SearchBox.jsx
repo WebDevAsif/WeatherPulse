@@ -6,12 +6,11 @@ import { useState } from "react";
 export default function SearchBox({ updateInfo }) {
   const [city, setCity] = useState("");
   const [error, setError] = useState(false);
-  const API_URL = "https://api.openweathermap.org/data/2.5/weather";
-  const API_KEY = "9b3abc421e7315b52f324f2536cc029a";
-
+  const apiUrl = import.meta.env.VITE_API_URL;
+  const apiKey = import.meta.env.VITE_API_KEY;
   const getWeatherInfo = async () => {
     try {
-      const response = await fetch(`${API_URL}?q=${city}&appid=${API_KEY}&units=metric`);
+      const response = await fetch(`${apiUrl}?q=${city}&appid=${apiKey}&units=metric`);
       const jsonRes = await response.json();
       const result = {
         city: jsonRes.name,
@@ -54,21 +53,43 @@ export default function SearchBox({ updateInfo }) {
   return (
     <div className="SearchBox">
       <div className="search-widget">
-        <form onSubmit={handleSubmit} aria-label="Weather search form" className="d-flex">
+        {/* <form onSubmit={handleSubmit} aria-label="Weather search form" className="d-flex">
           <input
             type="text"
             id="city"
             name="city"
             placeholder="City name"
-            className="cityInput"
+            className="cityInput form-control"
             value={city}
             onChange={handleChange}
             required
             aria-label="City name"
           />
-          <button type="submit" aria-label="Search" className="">
-            <SearchOutlinedIcon className="searchIcon" />
+          <button type="submit" aria-label="Search" className="btn btn-dark p-4">
+            <i className="fa-solid fa-magnifying-glass"></i>
+            Submit
           </button>
+        </form> */}
+        <form
+          className="form"
+          onSubmit={handleSubmit}
+          aria-label="Weather search form"
+          role="search"
+        >
+          <input
+            className="form-input"
+            type="search"
+            id="city"
+            name="city"
+            placeholder="Enter city name"
+            value={city}
+            onChange={handleChange}
+            required
+            aria-label="City name"
+          />
+          <Button className="button" aria-label="Search" type="submit">
+            <SearchOutlinedIcon className="fs-2" />
+          </Button>
         </form>
         {error && (
           <p className="errorMessage" style={{ color: "red" }}>
