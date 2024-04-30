@@ -24,7 +24,6 @@ export default function SearchBox({ updateInfo }) {
         wind: jsonRes.wind.speed,
         sunrise: jsonRes.sys.sunrise,
         sunset: jsonRes.sys.sunset,
-        speed: jsonRes.wind.speed,
       };
       return result;
     } catch (err) {
@@ -53,23 +52,6 @@ export default function SearchBox({ updateInfo }) {
   return (
     <div className="SearchBox">
       <div className="search-widget">
-        {/* <form onSubmit={handleSubmit} aria-label="Weather search form" className="d-flex">
-          <input
-            type="text"
-            id="city"
-            name="city"
-            placeholder="City name"
-            className="cityInput form-control"
-            value={city}
-            onChange={handleChange}
-            required
-            aria-label="City name"
-          />
-          <button type="submit" aria-label="Search" className="btn btn-dark p-4">
-            <i className="fa-solid fa-magnifying-glass"></i>
-            Submit
-          </button>
-        </form> */}
         <form
           className="form"
           onSubmit={handleSubmit}

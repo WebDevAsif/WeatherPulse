@@ -11,6 +11,35 @@
   font-size: 2rem;
 }
 
+.info-box__temp {
+  font-size: 4rem;
+}
 p {
   margin: 0;
+}
+
+.social-info p,
+a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.weather-images {
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+}
+/* ==================================== */
+
+.details-weather {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 15px;
+  font-size: 0.8rem;
+  background-color: rgb(82, 82, 131);
+  color: #fff;
+  border-radius: 14px;
+  padding: 15px 0;
 }

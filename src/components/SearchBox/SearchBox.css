@@ -3,8 +3,6 @@
   align-items: center;
   justify-content: center;
   gap: 15px;
-  /* border-radius: 50px; */
-  /* background-color: #2f3640; */
   padding: 0 15px;
 }
 .form input {
@@ -16,6 +14,7 @@
   padding: 0 20px;
   cursor: pointer;
   background-color: #2f3640;
+  color: #fff;
   border-radius: 50px;
 }
 
@@ -26,4 +25,13 @@
   outline: none;
   border-radius: 50px;
   background-color: #2f3640;
+  color: #fff;
+  transition: all 0.5s ease;
+}
+
+.form .button:hover {
+  /* background-color: rgb(109, 109, 186); */
+  background-color: rgb(82, 82, 131);
+
+  transition: 100ms;
 }
