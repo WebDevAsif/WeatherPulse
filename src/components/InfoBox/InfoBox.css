@@ -1,3 +1,7 @@
+* {
+  overflow: hidden;
+}
+
 .info-box {
   padding: 3rem 0;
 }
@@ -42,4 +46,8 @@ a {
   color: #fff;
   border-radius: 14px;
   padding: 15px 0;
+}
+
+.weather-app__desc {
+  margin-top: 6rem;
 }

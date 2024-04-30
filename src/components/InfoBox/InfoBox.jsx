@@ -9,7 +9,6 @@ import {
 } from "@mui/icons-material";
 import { Launch as LaunchIcon } from "@mui/icons-material";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import genWeather from "../../assets/weather_icons/static/weather.svg";
 import "./InfoBox.css";
 
 export default function InfoBox({ info }) {
@@ -24,7 +23,7 @@ export default function InfoBox({ info }) {
       "https://images.unsplash.com/photo-1632117761686-00fb43fe5d9a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fHN1bm55JTIwd2VhdGhlcnxlbnwwfDB8MHx8fDA%3D%3D",
   };
 
-  const [currentDateTime, setCurrentDateTime] = useState(new Date());
+  // const [currentDateTime, setCurrentDateTime] = useState(new Date());
   const timeOptions = { hour: "numeric", minute: "numeric", hour12: true };
   const sunsetTimeMilliseconds = info.sunset * 1000;
   const sunriseTimeMilliseconds = info.sunrise * 1000;
@@ -33,12 +32,12 @@ export default function InfoBox({ info }) {
   const sunsetTime = setTime.toLocaleTimeString(undefined, timeOptions);
   const sunriseTime = riseTime.toLocaleTimeString(undefined, timeOptions);
 
-  useEffect(() => {
-    const intervalId = setInterval(() => {
-      setCurrentDateTime(new Date());
-    }, 1000);
-    return () => clearInterval(intervalId);
-  }, []);
+  // useEffect(() => {
+  //   const intervalId = setInterval(() => {
+  //     setCurrentDateTime(new Date());
+  //   }, 1000);
+  //   return () => clearInterval(intervalId);
+  // }, []);
 
   const weatherCondition = info.weather;
   const backgroundImageUrl =
@@ -47,11 +46,9 @@ export default function InfoBox({ info }) {
 
   return (
     <div className="info-box">
-      {/* <img src={genWeather} alt="NormalWeather" /> */}
       <div className="info-box__details">
         <p className="info-box__temp">{Math.round(info.temp)}&deg;C</p>
         <p className="info-box__weather-unit">{info.weather}</p>
-        <p>Feels Like {Math.floor(info.feelsLike)}</p>
         <p className="info-box__city">{info.city}</p>
       </div>
       <hr />
@@ -60,7 +57,7 @@ export default function InfoBox({ info }) {
           <div className="weather-details">
             <ThermostatIcon />
             <p>Feels Like</p>
-            <p>{info.feelsLike}&deg;C</p>
+            <p>{Math.round(info.feelsLike)}&deg;C</p>
           </div>
           <div className="weather-details">
             <AirIcon />
@@ -89,7 +86,7 @@ export default function InfoBox({ info }) {
           </div>
         </div>
       </div>
-      <div className="weather-app__desc mt-5">
+      <div className="weather-app__desc">
         <div className="row row-cols-1 social-info">
           <div className="data-link col">
             <p>
