@@ -1,5 +1,8 @@
+/* Reset and Global Styles */
 * {
-  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .info-box {
@@ -35,7 +38,6 @@ a {
   height: 100px;
   border-radius: 50px;
 }
-/* ==================================== */
 
 .details-weather {
   display: grid;
@@ -50,4 +52,18 @@ a {
 
 .weather-app__desc {
   margin-top: 6rem;
+  color: #fff;
+}
+
+.weather-app__desc a {
+  color: rgb(0, 149, 255);
+}
+
+/* ================= Media Query =================== */
+
+@media screen and (min-width: 769px) {
+  .details-weather {
+    width: 60%;
+    margin: 0 auto;
+  }
 }

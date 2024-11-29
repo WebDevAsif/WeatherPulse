@@ -1,64 +1,42 @@
+/* Reset and Global Styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-.weather-app {
-  height: 100vh;
+.weather {
   position: relative;
-}
-
-.weather-app__left {
-  padding: 0 25px;
-  text-align: center;
-  background-color: #0a192f;
-  color: #fff;
-}
-.weather-app__left form {
-  margin-top: 20px;
-}
-.weather-app__details {
-  padding-left: 25px;
-}
-
-.weather-app__details p {
-  font-size: 6rem;
-}
-
-.weather-app__right {
-  background: url(../../assets/weather_icons/Background.jpg);
-  background-size: cover;
-  display: flex;
-  align-items: start;
-  justify-content: end;
-  flex-direction: column;
-  padding-bottom: 50px;
-  padding-left: 0;
-  position: relative;
-}
-
-.dummy {
-  background-color: #000;
-  width: 100%;
   height: 100vh;
+}
+
+/* Wallpaper Styling */
+.weather-wallpaper {
   position: absolute;
   top: 0;
-  opacity: 0.3;
-}
-
-.dummy + div {
-  z-index: 100;
+  left: 0;
   width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  filter: opacity(0.3); /* Controls wallpaper opacity */
+  z-index: 0;
 }
 
-a {
-  text-decoration: none;
-  color: rgb(109, 109, 186);
+/* Foreground Content */
+.weather-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }
 
-/* @media (max-width: 767.9px) {
-  .weather-app__right {
-    display: none;
-  }
-} */
+.weather-app {
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+  color: #fff;
+}

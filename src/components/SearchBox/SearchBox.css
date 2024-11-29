@@ -1,3 +1,10 @@
+/* Reset and Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .form {
   display: flex;
   align-items: center;
@@ -13,7 +20,7 @@
   font-size: 1.2rem;
   padding: 0 20px;
   cursor: pointer;
-  background-color: #2f3640;
+  background-color: rgb(82, 82, 131);
   color: #fff;
   border-radius: 50px;
 }
@@ -24,14 +31,19 @@
   border: none;
   outline: none;
   border-radius: 50px;
-  background-color: #2f3640;
+  background-color: rgb(82, 82, 131);
   color: #fff;
   transition: all 0.5s ease;
 }
 
 .form .button:hover {
-  /* background-color: rgb(109, 109, 186); */
-  background-color: rgb(82, 82, 131);
-
+  background-color: rgb(175, 175, 229);
   transition: 100ms;
+}
+
+@media screen and (min-width: 769px) {
+  .form {
+    width: 60%;
+    margin: 10px auto 0;
+  }
 }
